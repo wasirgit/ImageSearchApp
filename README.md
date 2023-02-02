@@ -41,7 +41,7 @@ About pagination
 - Pagination available only if there is internet available. If there is no internet, new data will
   be loaded from database if user type new search query from searchView.  
   About Test
-- Only basic tests are available in this task.
+- Only basic tests are available in this project.
 
  
  
