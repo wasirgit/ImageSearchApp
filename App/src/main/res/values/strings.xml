@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PayBackCodingChallenge</string>
+    <string name="title_search">Search</string>
+    <string name="search_fragment_label">Search </string>
+    <string name="details_fragment_label">Details</string>
+    <string name="error_message">Something went wrong. Please try again.</string>
+    <string name="confirmation_dialog_msg">Do you want to see details?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="formated_name">Name: %1$s</string>
+    <string name="formated_tags">Tags: %1$s</string>
+    <string name="no_data_available">No data available</string>
+</resources>
