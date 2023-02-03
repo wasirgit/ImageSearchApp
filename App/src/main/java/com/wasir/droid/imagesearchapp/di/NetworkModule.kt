@@ -1,5 +1,4 @@
 package com.wasir.droid.imagesearchapp.di
-
 import com.google.gson.Gson
 import com.wasir.droid.core.data.api.ImageApi
 import com.wasir.droid.imagesearchapp.BuildConfig
@@ -65,7 +64,6 @@ class NetworkModule {
     fun provideImageApi(retrofit: Retrofit): ImageApi {
         return retrofit.create(ImageApi::class.java)
     }
-
 
 
 }

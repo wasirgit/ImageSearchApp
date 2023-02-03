@@ -14,6 +14,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.wasir.droid.paybackcodingchallenge", appContext.packageName)
+        assertEquals("com.wasir.droid.imagesearchapp", appContext.packageName)
     }
 }

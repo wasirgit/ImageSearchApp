@@ -23,7 +23,7 @@ android {
         }
     }
 
-    namespace 'com.wasir.droid.paybackcodingchallenge'
+    namespace 'com.wasir.droid.imagesearchapp'
     compileSdk 33
     defaultConfig {
         applicationId "com.wasir.droid.imagesearchapp"
