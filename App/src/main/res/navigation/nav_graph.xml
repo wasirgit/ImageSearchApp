@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/searchImageFragment"
-        android:name="com.wasir.droid.paybackcodingchallenge.presentation.ui.search.ImageSearchFragment"
+        android:name="com.wasir.droid.imagesearchapp.presentation.ui.search.ImageSearchFragment"
         android:label="@string/search_fragment_label"
         tools:layout="@layout/fragment_search">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsImageFragment"
-        android:name="com.wasir.droid.paybackcodingchallenge.presentation.ui.details.ImageDetailsFragment"
+        android:name="com.wasir.droid.imagesearchapp.presentation.ui.details.ImageDetailsFragment"
         android:label="@string/details_fragment_label"
         tools:layout="@layout/fragment_details">
         <argument

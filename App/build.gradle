@@ -26,13 +26,13 @@ android {
     namespace 'com.wasir.droid.paybackcodingchallenge'
     compileSdk 33
     defaultConfig {
-        applicationId "com.wasir.droid.paybackcodingchallenge"
+        applicationId "com.wasir.droid.imagesearchapp"
         minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.wasir.droid.paybackcodingchallenge.HiltTestRunner"
+        testInstrumentationRunner "com.wasir.droid.imagesearchapp.HiltTestRunner"
     }
 
     Properties properties = new Properties()

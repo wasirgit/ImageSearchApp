@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name="com.wasir.droid.paybackcondingchanllenge.HiltTestActivity"
+            android:name="com.wasir.droid.imagesearchapp.HiltTestActivity"
             android:exported="true" />
     </application>
 
