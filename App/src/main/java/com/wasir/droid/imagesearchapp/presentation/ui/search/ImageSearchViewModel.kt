@@ -51,7 +51,7 @@ class ImageSearchViewModel @Inject internal constructor(
         if (pageToFetch != Constant.NO_MORE_PAGE) {
             searchJob?.cancel()
             uiState.value = UiState.Loading
-            searchJob = viewModelScope.launch(dispatchers.getIO()) {
+            searchJob = viewModelScope.launch(dispatchers.getMain()) {
                 searchImages.search(searchQuery, pageToFetch, Constant.PAGE_SIZE)
                     .collect { result ->
                         when (result) {
@@ -59,11 +59,11 @@ class ImageSearchViewModel @Inject internal constructor(
                                 result.data?.let {
                                     totalPage = (it.totalHits / Constant.PAGE_SIZE)
                                 }
-                                uiState.postValue(UiState.Success(result.data?.imageLists))
+                                uiState.value = (UiState.Success(result.data?.imageLists))
                                 updatePageSize()
                             }
                             is Resource.Error -> {
-                                uiState.postValue(UiState.Error(result.message))
+                                uiState.value = (UiState.Error(result.message))
                             }
                         }
                     }
@@ -75,15 +75,15 @@ class ImageSearchViewModel @Inject internal constructor(
     fun searchImageOffline() {
         searchJob?.cancel()
         uiState.value = UiState.Loading
-        searchJob = viewModelScope.launch(dispatchers.getIO()) {
+        searchJob = viewModelScope.launch(dispatchers.getMain()) {
             searchImages.searchOffline(searchQuery)
                 .collect { result ->
                     when (result) {
                         is Resource.Success -> {
-                            uiState.postValue(UiState.Success(result.data?.imageLists))
+                            uiState.value = (UiState.Success(result.data?.imageLists))
                         }
                         is Resource.Error -> {
-                            uiState.postValue(UiState.Error(result.message))
+                            uiState.value = (UiState.Error(result.message))
                         }
                     }
                 }
