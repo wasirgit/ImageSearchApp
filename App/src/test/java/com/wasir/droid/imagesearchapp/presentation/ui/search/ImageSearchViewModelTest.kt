@@ -7,9 +7,12 @@ import com.wasir.droid.core.data.util.DispatchersProvider
 import com.wasir.droid.core.data.util.MockData
 import com.wasir.droid.core.domain.usecase.SearchImages
 import com.wasir.droid.core.domain.util.Resource
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -30,6 +33,7 @@ class ImageSearchViewModelTest {
 
     @Before
     fun setUp() {
+        Dispatchers.setMain(Dispatchers.Unconfined)
         dispatcherProvider = CoroutineDispatcherProviderImpl()
         fakeImageRepositoryImpl = FakeImageRepositoryImpl(dispatcherProvider)
         searchImages = SearchImages(fakeImageRepositoryImpl)
@@ -67,6 +71,7 @@ class ImageSearchViewModelTest {
 
     @After
     fun tearDown() {
+        Dispatchers.resetMain()
     }
 
 }

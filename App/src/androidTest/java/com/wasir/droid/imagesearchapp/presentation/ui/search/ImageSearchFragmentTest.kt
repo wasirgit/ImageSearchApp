@@ -38,7 +38,7 @@ class ImageSearchFragmentTest {
     }
 
     @Test
-    fun navigateAndDisplayImageDetailsFragment() {
+    fun navigateAndDisplayImageSearchFragment() {
         val navController = Mockito.mock(NavController::class.java)
         launchFragmentInHiltContainer<ImageSearchFragment>(
             factory = fragmentFactory
